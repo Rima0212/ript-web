@@ -1,0 +1,923 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(253, 253, 253);
+    
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+    display: flex;
+    z-index: 100000;
+}
+.header{
+    position: sticky;
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(255, 255, 255);
+    padding: 2vw 2.5vw;
+    transition: 0.5s;
+    
+}
+header.sticky{
+    padding: 2vw 6vw;
+}
+header.sticky ul li a{
+    color: #000;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+.menu{
+    width: 100%;
+    height: 70%;
+    margin-top: 10.5%; 
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 0;
+    gap: 3vw;
+    top: 0;
+    left: -100%;
+    font-size: 23px;
+    font-weight: 300;
+    text-transform: capitalize;
+    transition: 0.5s;
+    background-color:  rgb(20, 23, 24);
+}
+.menu li{
+    list-style: none;
+    
+}
+.menu li a{
+    
+    text-decoration: none;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0;
+    transition: 0.3s;
+    font-size: 23px;
+    line-height: 1;
+    color: rgb(245, 232, 232);
+}
+.menu li a,
+        .menu li a:hover{
+            padding: 31.5px;
+            font-size: 24px;
+            box-shadow: 0 1px 0 rgb(18, 241, 10) inset;
+        }
+.menu li a:hover{
+    box-shadow: 0 -5px 0px floralwhite inset,
+    5-00px 0 0 rgb(238, 255, 4) ;
+    padding: 35px 25px 45px 25px;
+}
+
+.hamburger{
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background: rgb(20, 22, 20);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 9;
+    transition: 0.3s;
+   
+}
+.hamburger:before,
+.hamburger:after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    right: 0;
+    background:rgb(20, 22, 19);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hamburger:before{
+    top: -10px;
+    width: 30px;
+}
+.hamburger:after{
+    top: 10px;
+    width: 30px;
+}
+.toggle-menu{
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    height: 100%;
+    cursor: pointer;
+    width: 30px;
+    background-color:  rgb(29, 193, 235);
+
+}
+.hamburger,
+.toggle-menu{
+    display: block;
+}
+.navigation input:checked ~ .hamburger{
+    background: transparent;
+}
+.navigation input:checked ~ .hamburger:before{
+    top: 0;
+    width: 30px;
+    transform: rotate(-45deg);
+
+}
+.navigation input:checked ~ .hamburger:after{
+    top: 0;
+    transform: rotate(45deg);
+    width: 30px;
+}
+.navigation input:checked ~ .menu{
+    left: 0;
+}
+
+
+.header .logo{
+    height: 9vh;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.logo a img{
+    width: 9%;
+    padding: 2vw 1vw;
+    
+}
+.logo h1{
+    position: absolute;
+    display: flex;
+    padding: 1vw 1.5vw;
+    margin-right: 60px;
+    margin-left: 78px;
+    top: 35%;
+    text-transform:capitalize ;
+    z-index: 0;
+}
+
+#home{
+   min-height: 100vh;
+   width: 100%; 
+   padding:2vw 3vw;
+   display: flex;
+   flex-direction: column;
+    position: relative;
+    color: rgb(0, 0, 0);
+}
+#home .page1{
+    position: relative;
+    min-height: 87vh;
+    width: 100%;
+    display: flex;
+}
+#home .page1 img{
+width: 100%;
+height: 87vh;
+position: relative;
+display: flex;
+background-position: center;
+
+}
+/*.page1 h1{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 0;
+    top: 20%;
+    font-weight: 800;
+    font-size: 60px;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 10%;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #fff;
+
+.page1 h1::before{
+    content: "THE REGIONAL INSTITUTE OF PRINTING TECHNOLOGY";
+    position: absolute;
+    color: WHITE;
+    top:-2px;
+    left: -4px;
+    z-index: -1;
+}*/
+#home .page2{
+    width: 100%;
+    min-height: 50vh;
+    padding: 0.2vw 1vw;
+    margin-top: -10%;
+    position: relative;
+    
+     background-color: rgb(233, 218, 218);
+    
+}
+.page2 span{
+    font-size: 30px;
+    font-weight: 900;
+    padding: 2vw 1vw;
+    display: flex;
+    position: relative;
+    margin-left: 7%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(9, 146, 27);
+}
+.page2 h3{
+    position: relative;
+    display: flex;
+    margin-top:1%;
+    font-size: 1.7vw;
+    margin-left: 10%;
+    text-align: justify;
+    align-items: center;
+    margin-right: 10%;
+    padding: 1vw 3vw;
+}
+
+#principal{
+    min-height: 50vh;
+    width: 100%;
+    background-color: rgba(40, 40, 223, 0.692);
+    position: relative;
+    display: flex;
+    padding: 1vw 2vw;
+    
+    
+}
+#principal .quote{
+    height: 10vh;
+    width: 60%;
+    padding: 8px 6px;
+    position: relative;
+    display: flex;
+}
+#principal .quote h3{
+     position: relative;
+     
+     margin-left:3.8%;
+     align-items: center;
+     text-align: justify;
+}
+#principal .principal1{
+    height: 60vh;
+    position: absolute;
+    margin-left: 65%;
+    top: 8%;
+    
+}
+#principal .principal1 img{
+    height: 49vh;
+    width: 110%;
+    padding: 2vw 6vw;
+    margin-right: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+.about{
+    width: 100%;
+    height: 155vh;
+    background-color: rgb(233, 218, 218);
+    padding: 1px 10px;
+    position: relative;
+}
+.about h2{
+    text-align: center;
+    font-size: 33px;
+    padding: 8px 10px;
+    justify-content: center;
+    color:rgb(9, 146, 27);
+}
+
+.about p{
+    margin-left: 3%;
+    text-align: center;
+    margin-right:3%;
+    padding: 10px 10px;
+    margin-top: 21px;
+    font-size: 19px;
+}
+
+
+
+.about ul{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20.2px;
+    
+    
+}
+.course ul li{
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.facility{
+    background-color: rgb(233, 218, 218);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.facility h2{
+    text-align: center;
+    font-size: 33px;
+    justify-content: center;
+    color:rgb(9, 146, 27);
+}
+.facility p{
+    text-align: center;
+    font-size: 19px;
+    padding-top: 50px;
+}
+.details{
+    width: 100%;
+    height: 100vh;
+    background-color:rgb(233, 218, 218);
+}
+.details h1{
+    text-align: center;
+    font-size: 33px;
+    justify-content: center;
+    color:rgb(9, 146, 27);
+}
+.details p{
+    margin-left: 3%;
+    text-align: left;
+    margin-right:3%;
+    padding: 10px 8px;
+    margin-top: 21px;
+    font-size: 19px;
+}
+.library1 img{
+    width: 100%;
+    height: 50vh;
+}
+.library{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(233, 218, 218);
+}
+.library h1{
+    text-align: center;
+    font-size: 33px;
+    justify-content: center;
+    color:rgb(9, 146, 27);
+    
+}
+.library p{
+    margin-left: 3%;
+    text-align: center;
+    margin-right:3%;
+    margin-top: 21px;
+    font-size: 19px;
+}
+.admission{
+    width: 100%;
+    height: 155vh;
+    background-color: rgb(233, 218, 218);
+    padding: 1px 10px;
+    position: relative;
+
+}
+.admission h1{
+    text-align: center;
+    font-size: 33px;
+    padding: 20px 10px;
+    justify-content: center;
+    color:rgb(9, 146, 27);
+}
+.admission p{
+    margin-left: 3%;
+    text-align: center;
+    margin-right:3%;
+    padding: 10px 10px;
+    margin-top: 21px;
+    font-size: 19px;
+}
+footer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.footer{
+    width: 100%;
+    height: 4vh;
+    position: relative;
+    background-color: #000
+}
+.footer-text p{
+    color: white;
+    text-align: center;
+    padding: 2px 4px;
+    
+}
+
+
+
+
+
+
+
+
+@media (max-width:1400px) {
+    #home .page2{
+        position: relative;
+        min-height: 90vh;
+    }
+    #principal{
+        position: relative;
+        margin-top: -1%;
+    }
+   
+    #home .page2 h3{
+        font-size: 1.6vw;
+    }
+}
+
+
+@media(max-width:1200px){
+    
+    .header{
+        padding-top: 30px;
+    }
+    .menu{
+    
+        justify-content:flex-start;
+        margin-top: 105px;
+        width: 100%;
+        height: 80%;
+        padding-top: 5px;
+        z-index: 9;
+        
+
+    }
+    .menu li{
+        width: 100%;
+    }
+    .menu li a,
+        .menu li a:hover{
+            padding: 23px;
+            font-size: 24px;
+            box-shadow: 0 1px 0 rgb(18, 241, 10) inset;
+        }
+        #home .page1 img{
+            width: fit-content;
+            height: fit-content;
+            fill-opacity: calc(45deg);
+        }
+        .menu li a:hover{
+            box-shadow: 0 -5px 0px floralwhite inset,
+            5-00px 0 0 rgb(238, 255, 4) ;
+            padding: 35px 25px 45px 25px;
+        }
+        .logo a img{
+            display: block;
+            position: absolute;
+           margin-top: -1.5%;
+
+            
+        }
+        .logo h1{
+            margin-top: -1%;
+        }
+        #home .page1 h1{
+            display: flex;
+            position: absolute;
+            left: -30px;
+            flex-direction: column;
+        }
+        .page1 h1::before{
+            content: "THE REGIONAL INSTITUTE OF PRINTING TECHNOLOGY";
+            position: absolute;
+            color: WHITE;
+            top:-4px;
+            left: -4px;
+            z-index: -1;
+        }
+        #home{
+            position: relative;
+            min-height: 50vh;
+        }
+        #home .page2{
+            position: relative;
+            min-height: 50vh;
+        }
+        #home .page2 h3 {
+            font-size: 1.7vw;
+        }
+        #home .page1 img{
+            height: 100vh;
+            width: 100%;
+        }
+        .page2 span{
+            text-align: center;
+            margin-right: 10%;
+        }
+        #principal{
+            min-height: 95vh;
+            width: 100%;
+           
+        }
+        #principal .quote{
+            height: 60vh;
+            
+        }
+        .facility{
+            height: 145vh;
+        }
+       .about{
+        height: 220vh;
+       }
+       
+}
+
+
+
+@media (max-width:978px) {
+    #principal{
+        min-height: 100vh;
+    }
+    #principal .quote h3{
+        position: relative;
+        font-size: 2vw;
+    }
+    #principal .quote h3{
+        position: relative;
+        font-size: 2.1vw;
+    }
+    #home .page2 {
+        min-height: 70vh;
+    }
+    #home .page2 h3{
+        font-size: 2vw;
+    }
+    #home .page1 img{
+        width: 100%;
+        
+    }
+    .page2 span{
+        text-align: center;
+        margin-right: 5%;
+    }
+
+}
+@media (max-width:800px) {
+    #principal{
+        min-height: 150vh;
+       
+    }
+    #home .page1 img{
+        height: 70vh;
+    }
+    #principal .quote h3{
+        position: relative;
+        font-size: 2.2vw;
+    }
+    .header{
+        height: 20vh;
+    }
+    #home .page2{
+        min-height: 65vh;
+    }
+    #home .page2 h3{
+        position: relative;
+        font-size: 2vw;
+    }
+    .menu{
+        margin-top: 16%;
+    }
+    
+}
+@media (max-width:750px) {
+    #principal{
+        min-height: 300vh;
+       
+    }
+    #principal .quote h3{
+        position: relative;
+        font-size: 2.1vw;
+    }
+    #home .page2 {
+        min-height: 49vh;
+    }
+    
+}
+@media (max-width:700px) {
+    #principal{
+        min-height: 120vh;
+        
+        
+    }
+    #home .page2{
+        min-height: 50vh;
+    }
+    .menu{
+        margin-top: 18%;
+    }
+   
+}
+@media (max-width:650px) {
+    #home .page2{
+        min-height: 50vh;
+    }
+    #principal{
+        height: 88vh;
+       
+    }
+    .page2 span{
+        font-size: 4vw;
+    }
+    #home .page1 img{
+        max-height: 80vh;
+    }
+    .logo a img{
+        width: 15%;
+    }
+    .menu{
+        margin-top: 19%;
+    }
+    
+}
+@media (max-width:600px){
+    #principal{
+       font-size: 20px;
+       
+    }
+    .page2 h3{
+        font-size: 18px;
+    }
+    #home .page1 img{
+        height: auto;
+    }
+    #home .page2{
+        min-height: 50vh;
+    }
+    #home .page1 img{
+        max-height: 75vh;
+    }
+    #home .page2 h3{
+        font-size: 6vw;
+    }
+    .logo a img{
+        width: 15%;
+    }
+}
+@media (max-width:570px) {
+    #principal{
+        
+        padding: 4px 6px;
+        height: 50vh;
+    }
+    #home .page2{
+        min-height: 60vh;
+    }
+    #home .page1 img{
+        max-height: 73vh;
+    }
+    .logo a img{
+        width: 18%;
+    }
+    .logo h1{
+        font-size: 25px;
+        margin-left: 85px;
+    }
+    .header{
+        height: 23vh;
+    }
+    .menu{
+        margin-top: 29%;
+    }
+    
+    
+    
+}
+@media (max-width:484px) {
+    #home .page2{
+        height: 103vh;
+    }
+    .page2 h3{
+        font-size: 5vw;
+    }
+    
+    #home .page1 img{
+        max-height: 70vh;
+    }
+
+}
+@media (max-width:440px) {
+    .menu{
+        margin-top: 50%;
+        height: auto;
+    }
+    #home .page2{
+        min-height: 50vh;
+    }
+    #home .page2 h3{
+        font-size: 1px;
+    }
+    .header{
+        height: 30vh;
+    }
+    #principal{
+        margin-top: 1%;
+        padding: 4px 6px;
+        height: 350vh;
+    }
+    #principal .quote{
+        font-size: 15px;
+    }
+    .footer{
+        margin-top: 60%;
+    }
+}
+@media (max-width:404px) {
+    .header{
+        height: 29vh;
+    }
+    .menu{
+        margin-top: 50%;
+    }
+    #home .page2{
+        height: 280vh;
+    }
+    #principal{
+        margin-top: 143%;
+        padding: 4px 6px;
+        height: 150vh;
+    }
+}
+@media (max-width:367px) {
+    #home .page2{
+        height: 280vh;
+    }
+    #principal{
+        margin-top: 183%;
+        padding: 4px 6px;
+        height: 190vh;
+    }
+}
+@media (max-width:348px) {
+    .logo h1{
+        font-size: 23px;
+        font-weight: 900;
+    }
+    .logo a img{
+        width: 25%;
+    }
+    .header{
+        height: 27vh;
+    }
+    .menu{
+        margin-top: 55%;
+    }
+    #home .page2{
+        height: 280vh;
+    }
+    #principal{
+        margin-top: 203%;
+        padding: 4px 6px;
+        height: 200vh;
+    }
+}
+@media (max-width:320px) {
+    .header{
+        height: 33vh;
+    }
+}
+@media (max-width:304px) {
+    .details{
+        width: 100%;
+        height: 130vh;
+        background-color:rgb(233, 218, 218);
+    }
+    .logo a img{
+        width: 22%;
+    }
+    .logo h1{
+        font-size: 20px;
+    }
+    .header{
+        height: 29vh;
+    }
+    .menu{
+        margin-top: 70%;
+    }
+    #home .page2{
+        height: 280vh;
+    }
+    #principal{
+        margin-top: 353%;
+        padding: 4px 6px;
+        height: 290vh;
+    }
+    
+}
+@media (max-width:250px) {
+    .logo h1{
+        margin-left: 55px;
+    }
+    #home .page1 img{
+        height: 90vh;
+    }
+    .logo a img{
+        width: 27%;
+    }
+    .menu{
+        margin-top: 80%;
+    }
+    #home{
+        height: 200vh;
+    }
+    #home .page2{
+        height: 900vh;
+    }
+    #home .page2 span{
+        font-size: 13px;
+    }
+    #home .page2 h3{
+        font-size: 12.5px;
+    }
+    #principal{
+        margin-top: 1px;
+        padding: 4px 6px;
+        height: 10vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-height:852px) {
+    #home .page1 img{
+        height: 80vh;
+    }
+    #home .page2 {
+        position: relative;
+        min-height: 40vh;
+        
+    }
+    #home .page2 h3{
+        font-size: 1.8vw;
+    }
+    #principal{
+        min-height: 30vh;
+    }
+    .menu{
+        margin-top: 11%;
+        height: 77vh;
+    }
+    .menu li a,
+        .menu li a:hover{
+           height: 11vh;
+        }
+}
+@media (min-height:705px) {
+    #home .page2 {
+        position: relative;
+        min-height: 50vh;
+    }
+    #principal{
+        min-height: 76vh;
+    }
+    #home .page1 img{
+        max-height: 73vh;
+    }
+}
+@media (max-height:750px){
+    .header{
+        min-height: 20vh;
+    }
+    #principal{
+        min-height: 105vh;
+    }
+}
